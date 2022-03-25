@@ -210,7 +210,13 @@ Output:
 */
 
 export function getCars(arr) {
-    return [];
+    const newArry = arr.filter(auto => {
+        if(auto.type === 'car'){
+            return auto;
+        }
+    });
+
+    return newArry;
 }
 
 /*
@@ -223,7 +229,11 @@ Output:
 */
 
 export function getChevyCars(arr) {
-    return [];
+    const newArry = arr
+        .filter(auto => auto.make === 'chevy')
+        .filter(auto => auto.type === 'car');
+
+    return newArry;
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
